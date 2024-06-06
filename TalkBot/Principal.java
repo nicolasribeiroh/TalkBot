@@ -10,13 +10,23 @@ public class Principal {
     public static void main(String[] args){
         
         String nome;
+        String pergunta;
+        String[] tempo = new String[] {"Clima","Tempo","clima","tempo"};
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite seu nome: ");
         nome = sc.nextLine();
 
         System.out.printf("Olá %s, Tudo Bem?",nome);
-        
+        System.out.print("\nO que gostaria de perguntar? ");
+        pergunta = sc.nextLine();
+
+        boolean p1= pergunta.equals(tempo);
+        if (p1==true){
+            Hora();
+
+        }
+
         
 
         
