@@ -1,0 +1,71 @@
+[1mdiff --git a/TalkBot/Principal.java b/TalkBot/Principal.java[m
+[1mindex c1d669a..de2cba5 100644[m
+[1m--- a/TalkBot/Principal.java[m
+[1m+++ b/TalkBot/Principal.java[m
+[36m@@ -1,5 +1,4 @@[m
+ import java.time.LocalDate;[m
+[31m-import java.time.LocalDateTime;[m
+ import java.time.LocalTime;[m
+ import java.time.format.DateTimeFormatter;[m
+ import java.util.Scanner;[m
+[36m@@ -9,30 +8,48 @@[m [mimport java.util.Locale;[m
+ public class Principal {[m
+     public static void main(String[] args){[m
+         [m
+[31m-        String nome;[m
+[31m-        String pergunta;[m
+[31m-        String[] tempo = new String[] {"Clima","Tempo","clima","tempo"};[m
+ [m
+         Scanner sc = new Scanner(System.in);[m
+[31m-        System.out.print("Digite seu nome: ");[m
+[31m-        nome = sc.nextLine();[m
+[32m+[m[32m        System.out.print("Olá, tudo bem? qual seu nome? ");[m
+[32m+[m[32m        String nome = sc.nextLine();[m
+ [m
+[31m-        System.out.printf("Olá %s, Tudo Bem?",nome);[m
+[32m+[m[32m        //Declaração para verificar as perguntas[m[41m        [m
+[32m+[m[32m        String hora = "hora";[m
+[32m+[m[32m        String data = "data";[m
+[32m+[m[32m        String despedida = "tchau";[m
+[32m+[m
+[32m+[m
+[32m+[m[41m       [m
+[32m+[m[32m        System.out.printf("Seja bem vindo %s!!",nome);[m
+         System.out.print("\nO que gostaria de perguntar? ");[m
+[31m-        pergunta = sc.nextLine();[m
+[32m+[m[32m        String pergunta = sc.nextLine();[m
+[32m+[m[41m        [m
+[32m+[m[32m        while (pergunta.toLowerCase().contains(despedida.toLowerCase())) {[m
+[32m+[m[41m            [m
+[32m+[m[41m        [m
+[32m+[m[32m        //Ação caso a pergunta seja feita com a palavra chave[m[41m [m
+[32m+[m[32m        if(pergunta.toLowerCase().contains(hora.toLowerCase())){[m
+[32m+[m[32m            System.out.println(Hora());[m
+[32m+[m[32m            System.out.print("O que mais gostaria de saber?? ");[m
+ [m
+[31m-        boolean p1= pergunta.equals(tempo);[m
+[31m-        if (p1==true){[m
+[31m-            Hora();[m
+[32m+[m[32m        }[m
+[32m+[m[32m        if(pergunta.toLowerCase().contains(data.toLowerCase())){[m
+[32m+[m[32m            System.out.println(Data());[m
+[32m+[m[32m            System.out.print("O que mais gostaria de saber?? ");[m
+ [m
+         }[m
+ [m
+         [m
+[31m-[m
+         [m
+[32m+[m[32m        else{[m
+[32m+[m[32m            System.out.print("Desculpe, não entendi sua pergunta poderia reformula-la:");[m
+[32m+[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m    }[m
+     }[m
+ [m
+[31m-   //Classe Data[m
+[32m+[m[32m    //Classe Data[m
+     private static String Data(){[m
+         LocalDate LocalDate=java.time.LocalDate.now();[m
+         DateTimeFormatter localDateTimeFormatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", new Locale("PT","br" ));[m
