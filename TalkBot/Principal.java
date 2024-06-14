@@ -2,6 +2,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
 
@@ -30,6 +31,7 @@ public class Principal {
         String receita ="receita";
         String vida="vida";
         String conta ="conta";
+        String filme ="filme";
      
        
         System.out.printf("Seja bem vindo %s!!",nome);
@@ -41,12 +43,12 @@ public class Principal {
             //Ação caso a pergunta seja feita com a palavra chave 
             if(pergunta.toLowerCase().contains(hora.toLowerCase())){
                 System.out.println(Hora());
-                System.out.print("Gostaria de fazer outra pergunta? caso contrario se despida: ");
+                System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
                 pergunta =sc.nextLine();
             }
             if(pergunta.toLowerCase().contains(data.toLowerCase())){
                 System.out.println(Data());
-                System.out.print("Gostaria de fazer outra pergunta? caso contrario se despida: ");
+                System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
                 pergunta =sc.nextLine();
             }
 
@@ -55,7 +57,7 @@ public class Principal {
             }
 
             if (pergunta.toLowerCase().contains(ajuda.toLowerCase())){
-                System.out.println("Você pode fazer perguntas como \n-Data\n-Hora\n-Ajuda\n-Se esta tudo bem\n-Receitas\n-Piadas\n-Curiosidades\n-Qual o significado da vida:");
+                System.out.println("Você pode fazer perguntas como \n-Data\n-Hora\n-Ajuda\n-Qual seu nome\n-Se esta tudo bem\n-Receitas\n-Piadas\n-Curiosidades\n-Qual o significado da vida\n-Receitas\n-Contas matematicas\n-Recomendações de filme ");
                 pergunta =sc.nextLine();
             }
             if (pergunta.toLowerCase().contains(Nome.toLowerCase())){
@@ -67,7 +69,7 @@ public class Principal {
                 String[] opcoes = { "Estou funcionando perfeitamente, obrigado por perguntar!", "Tudo ótimo por aqui. E com você?", "Pronto para ajudar no que você precisar!"};
                 String selecionada = opcoes[new Random().nextInt(opcoes.length)];
                 System.out.println(selecionada);
-                System.out.print("Gostaria de fazer outra pergunta? caso contrario se despida: ");
+                System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
                 pergunta =sc.nextLine();
             }
                 //redundancia da pergunta anterior 
@@ -76,9 +78,9 @@ public class Principal {
                  String[] op1 = { "Estou funcionando perfeitamente, obrigado por perguntar!", "Tudo ótimo por aqui. E com você?", "Pronto para ajudar no que você precisar!"};
                 String selecionada = op1[new Random().nextInt(op1.length)];
                 System.out.println(selecionada);
-                System.out.print("Gostaria de fazer outra pergunta? caso contrario se despida: ");
+                System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
                 pergunta =sc.nextLine();
-                System.out.print("Gostaria de fazer outra pergunta? caso contrario se despida: ");
+                System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
                 pergunta =sc.nextLine();
             }
 
@@ -99,7 +101,7 @@ public class Principal {
                 "Acredita-se que a Terra colidiu com um planeta do tamanho de Marte chamado Theia, resultando na formação da Lua."};
                 String selecionada = op3[new Random().nextInt(op3.length)];
                 System.out.println(selecionada);
-                System.out.print("Gostaria de fazer outra pergunta? caso contrario se despida: ");
+                System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
                 pergunta =sc.nextLine();
             }
 
@@ -109,7 +111,7 @@ public class Principal {
                 "\nSalada de Atum\n\n -1 lata de atum\n-1 tomate picado\n-1/2 cebola picada\n-1 cenoura ralada\n-1 colher de sopa de maionese\n-Sal e pimenta a gosto\n-Suco de limão a gosto\n\nModo de preparo:\n -Escorra o atum e coloque em uma tigela\n-Adicione o tomate, a cebola, a cenoura e a maionese\n-Tempere com sal, pimenta e suco de limão\n-Misture bem e sirva com folhas de alface ou pão"};
                 String selecionada = op4[new Random().nextInt(op4.length)];
                 System.out.println(selecionada);
-                System.out.print("Gostaria de fazer outra pergunta? caso contrario se despida: ");
+                System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
                 pergunta =sc.nextLine();
             }
             if (pergunta.toLowerCase().contains(vida.toLowerCase())){
@@ -118,7 +120,7 @@ public class Principal {
                 "Talvez seja ser feliz e fazer os outros felizes."};
                 String selecionada = op5[new Random().nextInt(op5.length)];
                 System.out.println(selecionada);
-                System.out.print("Gostaria de fazer outra pergunta? caso contrario se despida: ");
+                System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
                 pergunta =sc.nextLine();
             }
 
@@ -128,13 +130,22 @@ public class Principal {
                 "Uma curiosidade interessante: os girassóis podem limpar solo contaminado com metais pesados."};
                 String selecionada = op6[new Random().nextInt(op6.length)];
                 System.out.println(selecionada);
-                System.out.print("Gostaria de fazer outra pergunta? caso contrario se despida: ");
+                System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
                 pergunta =sc.nextLine();
             }
 
+            if (pergunta.toLowerCase().contains(filme.toLowerCase())){
+                String[] op6 = {"Mad Max: Estrada da Fúria (2015)","John Wick","Superbad","Forrest Gump","Blade Runner 2049","Interestelar" };
+                String selecionada = op6[new Random().nextInt(op6.length)];
+                System.out.println(selecionada);
+                System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
+                pergunta =sc.nextLine();
+            }
             if(pergunta.toLowerCase().contains(conta.toLowerCase())){
                 Principal Conta = new Principal();
                 Conta.Conta();
+                System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
+                pergunta =sc.nextLine();
             }
 
             else{
@@ -181,69 +192,76 @@ public class Principal {
         String multi="multi";
         double total =0;
         char tp=' ';
-        int i=0;
-        double[] vlr=new double[i];
+       ArrayList<Double> valores = new ArrayList<>();
 
         System.out.println("Qual tipo de conta gostaria de fazer: ");
-        pergunta =sc.nextLine();
-        
-    if (pergunta.toLowerCase().contains(soma.toLowerCase())){
-        while(i==2404){
-            System.out.println("Digite os valores(0 para sair): ");
-            vlr[i]=sc.nextDouble();
-                if(vlr.length==0){
-                    i=0;
-                }
-                i++;
-        }
+        pergunta = sc.nextLine();
 
-        tp= '+';
-        total += vlr.length;
-        
-    }
-
-    if (pergunta.toLowerCase().contains(sub.toLowerCase())){
-        while(i!=0){
-            System.out.println("Digite os valores(0 para sair): ");
-            vlr[i]=sc.nextDouble();
-                if(vlr.length==0){
-                    i=0;
-                }
-                i++;
-        }
-        tp ='-';
-        total -= vlr.length;
-    }
-
-    if (pergunta.toLowerCase().contains(div.toLowerCase())){
-        while(true){
-            System.out.println("Digite os valores(0 para sair): ");
-            vlr[i]=sc.nextDouble();
-                if(vlr[i]==0){
+        if (pergunta.toLowerCase().contains(soma.toLowerCase())) {
+            while (true) {
+                System.out.print("Digite o valor " + (valores.size() + 1) + " (Digite 0 para sair): ");
+                double valor = sc.nextDouble();
+                if (valor == 0) {
                     break;
                 }
+                valores.add(valor);
+                total += valor;
+            }
+            tp = '+';
         }
-        tp= '/';
- 
-        total /= vlr.length;
-    }
 
-    if (pergunta.toLowerCase().contains(multi.toLowerCase())){
-        while(true){
-            System.out.println("Digite os valores(0 para sair): ");
-            vlr[i]=sc.nextDouble();
-                if(vlr[i]==0){
+        if (pergunta.toLowerCase().contains(sub.toLowerCase())) {
+            while (true) {
+                System.out.print("Digite o valor " + (valores.size() + 1) + " (Digite 0 para sair): ");
+                double valor = sc.nextDouble();
+                if (valor == 0) {
                     break;
                 }
+                valores.add(valor);
+                if (valores.size() == 1) {
+                    total = valor; // Inicializa com o primeiro valor para subtrair os próximos
+                } else {
+                    total -= valor;
+                }
+            }
+            tp = '-';
         }
-        tp='*';
-        total *= vlr.length;
-    }
 
-    System.out.printf("O resultado da conta é:%d%s%d=%d",valor1,tp,valor2,total);
-    System.out.print("Gostaria de fazer outra pergunta? caso contrario se despida: ");
-    pergunta =sc.nextLine();
-}
+        if (pergunta.toLowerCase().contains(div.toLowerCase())) {
+            while (true) {
+                System.out.print("Digite o valor " + (valores.size() + 1) + " (Digite 0 para sair): ");
+                double valor = sc.nextDouble();
+                if (valor == 0) {
+                    break;
+                }
+                valores.add(valor);
+                if (valores.size() == 1) {
+                    total = valor; // Inicializa com o primeiro valor para dividir pelos próximos
+                } else {
+                    total /= valor;
+                }
+            }
+            tp = '/';
+        }
+
+        if (pergunta.toLowerCase().contains(multi.toLowerCase())) {
+            total = 1; // Inicializa o total como 1 para multiplicar
+            while (true) {
+                System.out.print("Digite o valor " + (valores.size() + 1) + " (Digite 0 para sair): ");
+                double valor = sc.nextDouble();
+                if (valor == 0) {
+                    break;
+                }
+                valores.add(valor);
+                total *= valor;
+            }
+            tp = '*';
+        }
+
+        System.out.printf("O resultado da conta é: %.2f\n", total);
+        System.out.print("\nGostaria de fazer outra pergunta? Caso contrário, se despida: ");
+        pergunta = sc.nextLine();
+    }
     
 
 
