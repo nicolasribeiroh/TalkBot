@@ -154,9 +154,7 @@ public class Principal {
 
             }
       }
-
         System.out.println("Tchau tchau, até uma próxima vez ;)");
-
     }
     
     public void setPerguntas(String pergunta){
