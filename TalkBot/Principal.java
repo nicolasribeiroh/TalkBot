@@ -15,7 +15,7 @@ public class Principal {
         
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Olá, tudo bem? qual seu nome? ");
+        System.out.print("Ola, tudo bem? qual seu nome? ");
         String nome = sc.nextLine();
 
         //Declaração para verificar as perguntas(palavras-chave)
@@ -66,7 +66,7 @@ public class Principal {
             }
 
             if (pergunta.toLowerCase().contains(tdBem.toLowerCase())){
-                String[] opcoes = { "Estou funcionando perfeitamente, obrigado por perguntar!", "Tudo ótimo por aqui. E com você?", "Pronto para ajudar no que você precisar!"};
+                String[] opcoes = { "Estou funcionando perfeitamente, obrigado por perguntar!", "Tudo otimo por aqui. E com você?", "Pronto para ajudar no que você precisar!"};
                 String selecionada = opcoes[new Random().nextInt(opcoes.length)];
                 System.out.println(selecionada);
                 System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
@@ -75,7 +75,7 @@ public class Principal {
                 //redundancia da pergunta anterior 
             if (pergunta.toLowerCase().contains(cmEsta.toLowerCase())){
                 //Método para aleatorizar as respostas do programa
-                 String[] op1 = { "Estou funcionando perfeitamente, obrigado por perguntar!", "Tudo ótimo por aqui. E com você?", "Pronto para ajudar no que você precisar!"};
+                 String[] op1 = { "Estou funcionando perfeitamente, obrigado por perguntar!", "Tudo otimo por aqui. E com você?", "Pronto para ajudar no que você precisar!"};
                 String selecionada = op1[new Random().nextInt(op1.length)];
                 System.out.println(selecionada);
                 System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
@@ -85,20 +85,20 @@ public class Principal {
             }
 
             if (pergunta.toLowerCase().contains(piada.toLowerCase())){
-               String[] op2 ={"Você sabe qual é o contrário de volátil? Vem cá, sobrinho", 
-                "Por que não é bom guardar kibe no freezer? Porque lá dentro ele esfirra",
+               String[] op2 ={"Você sabe qual é o contrário de volátil? Vem ca, sobrinho", 
+                "Por que nao e bom guardar kibe no freezer? Porque la dentro ele esfirra",
                 "Se chovesse achocolatado, a gente ia se molhar Toddynho","Por que a formiga tem quatro patas? Porque se ela tivesse cinco se chamaria fivemiga",
-                "Você sabe qual é a diferença entre lagoa e padaria? Na lagoa há sapinho. Na padaria, assa pão"};
+                "Você sabe qual a a diferença entre lagoa e padaria? Na lagoa ha sapinho. Na padaria, assa pao"};
                 String selecionada = op2[new Random().nextInt(op2.length)];
                 System.out.println(selecionada);
             }
 
             if (pergunta.toLowerCase().contains(curiosidade.toLowerCase())){
-                String[] op3 ={"A cada minuto, cerca de 72 horas de conteúdo são enviadas ao site de vídeos Youtube",
-                "Estima-se que, a cada ano, o monte Everest cresça 4 milímetros",
+                String[] op3 ={"A cada minuto, cerca de 72 horas de conteudo são enviadas ao site de videos Youtube",
+                "Estima-se que, a cada ano, o monte Everest cresça 4 milimetros",
                 "Você sabia que os pinguins se propõem e ficam juntos para toda a vida?",
-                "O mel é o único alimento que nunca estraga",
-                "Acredita-se que a Terra colidiu com um planeta do tamanho de Marte chamado Theia, resultando na formação da Lua."};
+                "O mel é o unico alimento que nunca estraga",
+                "Acredita-se que a Terra colidiu com um planeta do tamanho de Marte chamado Theia, resultando na formacao da Lua."};
                 String selecionada = op3[new Random().nextInt(op3.length)];
                 System.out.println(selecionada);
                 System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
@@ -106,9 +106,9 @@ public class Principal {
             }
 
             if (pergunta.toLowerCase().contains(receita.toLowerCase())){
-                String[] op4 ={"\nBruscheta\n\nIngredientes: \n-1 pão baguete cortado em fatias\n -2 tomates picados\n-1 dente de alho picado\n -Folha de manjericão\n-Azeite de Oliva\n -Sal e pimenta a gosto\n -Queijo parmesão ralado(opicional)\n\nModo de preparo: \n-Toste as fatias de pão até ficarem levemente douradas\n -Em uma tigela, misture os tomates, alho, manjericão, azeite, sal e pimente\n -Coloque a mistura de tomate sobre as fatias de pão tostado\n -Coloque a mistura de tomate sobre as fatias de pão tostado\n -Polvilhe com queijo parmesão, se desejar, e sirva",
+                String[] op4 ={"\nBruscheta\n\nIngredientes: \n-1 pao baguete cortado em fatias\n -2 tomates picados\n-1 dente de alho picado\n -Folha de manjericao\n-Azeite de Oliva\n -Sal e pimenta a gosto\n -Queijo parmesao ralado(opicional)\n\nModo de preparo: \n-Toste as fatias de pao até ficarem levemente douradas\n -Em uma tigela, misture os tomates, alho, manjericao, azeite, sal e pimente\n -Coloque a mistura de tomate sobre as fatias de pao tostado\n -Coloque a mistura de tomate sobre as fatias de pao tostado\n -Polvilhe com queijo parmesao, se desejar, e sirva",
                 "\nWrap de Frango\n\n - tortilha de trigo\n -1 filé de frango grelhado e fatiado\n-Folhas de alface\n-1 tomate picado\n-1/4 de cebola roxa fatiada\n-2 colheres de sopa de maionese ou molho de sua preferência\n\nModo de preparo:\n -Aqueça a torilha em uma frigideira por alguns segundos de cada lado\n-Espalhe a maionese ou molho na tortilha\n-Adicione o frango, alface, tomate e cebola\n-Enrole a tortilha como um wrap e sirva",
-                "\nSalada de Atum\n\n -1 lata de atum\n-1 tomate picado\n-1/2 cebola picada\n-1 cenoura ralada\n-1 colher de sopa de maionese\n-Sal e pimenta a gosto\n-Suco de limão a gosto\n\nModo de preparo:\n -Escorra o atum e coloque em uma tigela\n-Adicione o tomate, a cebola, a cenoura e a maionese\n-Tempere com sal, pimenta e suco de limão\n-Misture bem e sirva com folhas de alface ou pão"};
+                "\nSalada de Atum\n\n -1 lata de atum\n-1 tomate picado\n-1/2 cebola picada\n-1 cenoura ralada\n-1 colher de sopa de maionese\n-Sal e pimenta a gosto\n-Suco de limao a gosto\n\nModo de preparo:\n -Escorra o atum e coloque em uma tigela\n-Adicione o tomate, a cebola, a cenoura e a maionese\n-Tempere com sal, pimenta e suco de limao\n-Misture bem e sirva com folhas de alface ou pao"};
                 String selecionada = op4[new Random().nextInt(op4.length)];
                 System.out.println(selecionada);
                 System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
@@ -116,7 +116,7 @@ public class Principal {
             }
             if (pergunta.toLowerCase().contains(vida.toLowerCase())){
                 String[] op5 ={"42, segundo o 'Guia do Mochileiro das Galáxias'.",
-                "Acredito que o significado da vida é algo que cada um deve descobrir por si mesmo.",
+                "Acredito que o significado da vida e algo que cada um deve descobrir por si mesmo.",
                 "Talvez seja ser feliz e fazer os outros felizes."};
                 String selecionada = op5[new Random().nextInt(op5.length)];
                 System.out.println(selecionada);
@@ -125,8 +125,8 @@ public class Principal {
             }
 
             if (pergunta.toLowerCase().contains(tdBem.toLowerCase())){
-                String[] op6 = { "Você sabia que os polvos têm três corações?",
-                "Aqui vai uma dica: quando estiver aprendendo algo novo, tente ensinar a outra pessoa. Isso reforça seu aprendizado.",
+                String[] op6 = { "Voce sabia que os polvos tem tres coracoes?",
+                "Aqui vai uma dica: quando estiver aprendendo algo novo, tente ensinar a outra pessoa. Isso reforca seu aprendizado.",
                 "Uma curiosidade interessante: os girassóis podem limpar solo contaminado com metais pesados."};
                 String selecionada = op6[new Random().nextInt(op6.length)];
                 System.out.println(selecionada);
@@ -135,7 +135,7 @@ public class Principal {
             }
 
             if (pergunta.toLowerCase().contains(filme.toLowerCase())){
-                String[] op6 = {"Mad Max: Estrada da Fúria (2015)","John Wick","Superbad","Forrest Gump","Blade Runner 2049","Interestelar" };
+                String[] op6 = {"Mad Max: Estrada da Furia (2015)","John Wick","Superbad","Forrest Gump","Blade Runner 2049","Interestelar" };
                 String selecionada = op6[new Random().nextInt(op6.length)];
                 System.out.println(selecionada);
                 System.out.print("\nGostaria de fazer outra pergunta? caso contrario se despida: ");
@@ -257,7 +257,6 @@ public class Principal {
         }
 
         System.out.printf("O resultado da conta é: %.2f\n", total);
-        System.out.print("\nGostaria de fazer outra pergunta? Caso contrário, se despida: ");
         pergunta = sc.nextLine();
     }
     
